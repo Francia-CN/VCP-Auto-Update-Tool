@@ -1,6 +1,6 @@
-# vcp-update-tool
+# vcp-auto-update-tool
 
-🚀 VCP Update Tool - VCP 自动更新工具 
+🚀 VCP Auto Update Tool - VCP 自动更新工具 
 - 智能同步 VCPChat 和 VCPToolBox 项目的自动化脚本 
 - Automated update tool for VCPChat and VCPToolBox projects with intelligent conflict resolution and Docker deployment
 
