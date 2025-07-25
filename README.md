@@ -1,56 +1,41 @@
-# vcp-auto-update-tool
-
-🚀 VCP Auto Update Tool - VCP 自动更新工具 
-- 智能同步 VCPChat 和 VCPToolBox 项目的自动化脚本 
-- Automated update tool for VCPChat and VCPToolBox projects with intelligent conflict resolution and Docker deployment
-
-# VCP 自动更新工具 v1.0 - 完整使用指南
-
-<artifacts>
-<artifact identifier="readme-addition" type="text/markdown" title="README.md 需要添加的内容">
-## ⚠️ 重要声明
- 
-本工具是社区开发的第三方自动化工具，用于帮助用户同步更新 Fork 的 VCP 项目。
- 
-**📢 使用须知**
-- ✅ 本工具不是 VCP 项目的官方组件。
-- ✅ 使用前必须先 Fork 原始项目：
-[VCPChat](https://github.com/lioensky/VCPChat)和[VCPToolBox](https://github.com/lioensky/VCPToolBox)。
-- ✅ 本工具遵循 MIT 许可证，详见 `LICENSE` 文件。
-- ⚠️ **风险提示**：使用本工具的风险由用户自行承担。
-- 💡 **支持项目**：如果觉得有用，请给项目一个 ⭐ Star。
-
-🎯 工具定位
-本工具旨在解决 VCP 项目用户在同步上游更新时的痛点：
-
-- 🔄 自动化同步：从原作者仓库自动获取最新代码
-- 🤖 智能合并：自动处理代码冲突和依赖更新
-- 🐳 一键部署：自动重新构建和部署 Docker 应用
-- ⏪ 安全回滚：提供多层次的回滚和检查点机制
-- 📊 完整日志：详细记录每步操作便于问题诊断
-
-</artifacts>
+# VCP Auto Update Tool v1.0
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-v1.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.7%2B-green.svg)
-![License](https://img.shields.io/badge/license-MIT-yellow.svg)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)
+![VCP Auto Update Tool](https://img.shields.io/badge/VCP%20Auto%20Update%20Tool-v1.0-brightgreen?style=for-the-badge)
 
-**🚀 VCP Auto Update Tool v1.0 一键同步 VCP 项目，自动处理冲突，智能部署应用**
+![Version](https://img.shields.io/badge/version-v1.0-blue.svg?style=flat-square)
+![Python](https://img.shields.io/badge/python-3.7%2B-green.svg?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg?style=flat-square)
+
+**🚀 一键同步 VCP 项目，自动处理冲突，智能部署应用**
 
 _让 VCP 项目更新变得简单、安全、高效_
 
-[快速开始](#-快速开始) • [详细教程](#-详细教程) • [配置文件说明](#-配置文件详解) • [常见问题](#-常见问题) • [故障排除](#-故障排除)
+[快速开始](#-快速开始) • [详细教程](#-详细教程) • [配置说明](#️-配置文件详解) • [常见问题](#-常见问题) • [故障排除](#-故障排除)
 
 </div>
 
 ---
 
+## ⚠️ 重要声明
+
+本工具是社区开发的第三方自动化工具，用于帮助用户同步更新 Fork 的 VCP 项目。
+
+**📢 使用须知**
+
+- ✅ 本工具不是 VCP 项目的官方组件
+- ✅ 使用前必须先 Fork 原始项目：[VCPChat](https://github.com/lioensky/VCPChat) 和 [VCPToolBox](https://github.com/lioensky/VCPToolBox)
+- ✅ 本工具遵循 MIT 许可证，详见 `LICENSE` 文件
+- ⚠️ **风险提示**：使用本工具的风险由用户自行承担
+- 💡 **支持项目**：如果觉得有用，请给项目一个 ⭐ Star
+
+---
+
 ## 📋 目录
 
-- [🌟 什么是 VCP 自动更新工具](#-什么是vcp自动更新工具)
+- [🌟 什么是 VCP 自动更新工具](#-什么是-vcp-自动更新工具)
 - [🎯 为什么需要这个工具](#-为什么需要这个工具)
 - [💻 系统要求](#-系统要求)
 - [🚀 快速开始](#-快速开始)
@@ -69,18 +54,20 @@ _让 VCP 项目更新变得简单、安全、高效_
 
 ## 🌟 什么是 VCP 自动更新工具
 
-VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步和部署 VCPChat 和 VCPToolBox 项目而设计。主要功能包括：
+VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步和部署 VCPChat 和 VCPToolBox 项目而设计。
 
-### 核心功能
+### 🎯 核心功能
 
-- 🔄 **自动同步**：从原作者（lioensky）的仓库自动获取最新代码
-- 🤖 **智能合并**：自动处理代码冲突，确保更新顺利进行
-- 🐳 **Docker 自动化**：自动重新构建和部署 VCPToolBox Docker 应用
-- ⏪ **完整回滚**：提供多层次的回滚机制，更新失败可快速恢复
-- 📊 **详细日志**：全程记录操作过程，便于问题诊断
-- 🔒 **安全保护**：多重检查点保护，防止数据丢失
+| 功能                 | 描述                                       |
+| -------------------- | ------------------------------------------ |
+| 🔄 **自动同步**      | 从原作者（lioensky）的仓库自动获取最新代码 |
+| 🤖 **智能合并**      | 自动处理代码冲突，确保更新顺利进行         |
+| 🐳 **Docker 自动化** | 自动重新构建和部署 VCPToolBox Docker 应用  |
+| ⏪ **完整回滚**      | 提供多层次的回滚机制，更新失败可快速恢复   |
+| 📊 **详细日志**      | 全程记录操作过程，便于问题诊断             |
+| 🔒 **安全保护**      | 多重检查点保护，防止数据丢失               |
 
-### 技术特性
+### 💡 技术特性
 
 - **跨平台支持**：Windows、Linux、macOS 原生支持
 - **并行处理**：支持并行更新多个项目，显著提升速度
@@ -93,11 +80,9 @@ VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步�
 
 ## 🎯 为什么需要这个工具
 
-### 手动更新的痛点
+### ❌ 手动更新的痛点
 
 当您 Fork 了 VCPChat 和 VCPToolBox 项目后，原作者会持续更新代码。手动同步这些更新极其繁琐：
-
-❌ **传统方式的问题**：
 
 - 需要手动添加和管理上游仓库
 - 手动拉取、合并、解决冲突
@@ -107,7 +92,7 @@ VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步�
 - 无法处理复杂的合并冲突
 - 缺乏回滚和恢复机制
 
-✅ **本工具的优势**：
+### ✅ 本工具的优势
 
 - **一键完成**：所有步骤自动化，一个命令搞定
 - **智能处理**：自动解决大部分合并冲突
@@ -120,7 +105,7 @@ VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步�
 
 ## 💻 系统要求
 
-### 最低系统要求
+### 📋 最低系统要求
 
 | 组件         | 最低版本                                | 推荐版本                              | 说明                            |
 | ------------ | --------------------------------------- | ------------------------------------- | ------------------------------- |
@@ -132,7 +117,7 @@ VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步�
 | **磁盘空间** | 1GB                                     | 5GB+                                  | 包含项目和日志存储              |
 | **网络**     | 能访问 GitHub                           | 稳定的网络连接                        | 用于代码同步                    |
 
-### 软件依赖详解
+### 🔧 软件依赖详解
 
 #### Python 环境
 
@@ -141,12 +126,12 @@ VCP 自动更新工具是一个智能化的自动化脚本系统，专为同步�
 python --version  # 或 python3 --version
 
 # 必需的 Python 模块（通常已内置）
-- json（JSON 处理）
-- configparser（配置文件解析）
-- subprocess（进程管理）
-- threading（多线程支持）
-- pathlib（路径处理）
-- dataclasses（数据类支持，Python 3.7+）
+- json         # JSON 处理
+- configparser # 配置文件解析
+- subprocess   # 进程管理
+- threading    # 多线程支持
+- pathlib      # 路径处理
+- dataclasses  # 数据类支持（Python 3.7+）
 ```
 
 #### Git 配置
@@ -182,25 +167,22 @@ sudo systemctl status docker  # Linux
 
 ```mermaid
 graph LR
-    A[Fork 原始仓库] --> B[克隆到本地]
-    B --> C[下载更新工具]
-    C --> D[配置 Fork URL]
-    D --> E[运行自动更新]
+    A[1. Fork 原始仓库] --> B[2. 克隆到本地]
+    B --> C[3. 下载更新工具]
+    C --> D[4. 配置 Fork URL]
+    D --> E[5. 运行自动更新]
 ```
 
-### 🔧 环境准备检查清单
+### ✅ 环境准备检查清单
 
 在开始之前，请确认以下环境已准备就绪：
 
-```bash
-# ✅ 检查清单
-□ GitHub 账号已登录
-□ Python 3.7+ 已安装并配置 PATH
-□ Git 已安装并配置用户信息
-□ Docker 已安装（如需 VCPToolBox）
-□ 网络连接正常，可访问 GitHub
-□ 有足够的磁盘空间（至少 1GB）
-```
+- [ ] GitHub 账号已登录
+- [ ] Python 3.7+ 已安装并配置 PATH
+- [ ] Git 已安装并配置用户信息
+- [ ] Docker 已安装（如需 VCPToolBox）
+- [ ] 网络连接正常，可访问 GitHub
+- [ ] 有足够的磁盘空间（至少 1GB）
 
 ---
 
@@ -245,8 +227,8 @@ graph LR
 
 > ✅ **验证 Fork 成功**：确保您能访问以下两个 URL（将 YOUR_USERNAME 替换为您的实际用户名）：
 >
-> - https://github.com/YOUR_USERNAME/VCPChat
-> - https://github.com/YOUR_USERNAME/VCPToolBox
+> - `https://github.com/YOUR_USERNAME/VCPChat`
+> - `https://github.com/YOUR_USERNAME/VCPToolBox`
 
 ### 步骤 2：克隆到本地
 
@@ -298,16 +280,16 @@ pwd
 cd /d D:\VCP
 
 # 克隆 VCPChat（替换 YOUR_USERNAME 为您的 GitHub 用户名）
-git clone https://github.com/YOUR_USERNAME/VCPChat.git VCPChat-main
+git clone https://github.com/YOUR_USERNAME/VCPChat.git VCPChat
 
 # 克隆 VCPToolBox
-git clone https://github.com/YOUR_USERNAME/VCPToolBox.git VCPToolBox-main
+git clone https://github.com/YOUR_USERNAME/VCPToolBox.git VCPToolBox
 
 # 验证克隆成功
 dir
 # 应该看到：
-# VCPChat-main
-# VCPToolBox-main
+# VCPChat
+# VCPToolBox
 ```
 
 </details>
@@ -320,12 +302,12 @@ dir
 cd ~/VCP
 
 # 克隆仓库（替换 YOUR_USERNAME）
-git clone https://github.com/YOUR_USERNAME/VCPChat.git VCPChat-main
-git clone https://github.com/YOUR_USERNAME/VCPToolBox.git VCPToolBox-main
+git clone https://github.com/YOUR_USERNAME/VCPChat.git VCPChat
+git clone https://github.com/YOUR_USERNAME/VCPToolBox.git VCPToolBox
 
 # 验证克隆成功
 ls -la
-# 应该看到两个目录：VCPChat-main 和 VCPToolBox-main
+# 应该看到两个目录：VCPChat 和 VCPToolBox
 ```
 
 </details>
@@ -391,15 +373,15 @@ chmod +x update_vcp.py
 
 #### 3.4 验证目录结构
 
-此时，建议将您的目录结构修改为：
+此时，您的目录结构应该是：
 
 ```
 VCP/
-├── VCPChat/          # VCPChat 项目
+├── VCPChat/               # VCPChat 项目
 │   ├── .git/              # Git 仓库信息
 │   ├── src/               # 源代码
 │   └── ...                # 其他项目文件
-├── VCPToolBox/       # VCPToolBox 项目
+├── VCPToolBox/            # VCPToolBox 项目
 │   ├── .git/              # Git 仓库信息
 │   ├── docker-compose.yml # Docker 配置
 │   └── ...                # 其他项目文件
@@ -421,7 +403,7 @@ VCP/
 ```mermaid
 graph TD
     A[原作者仓库<br/>lioensky/VCPChat] -->|Fork| B[您的仓库<br/>YOUR_USERNAME/VCPChat]
-    B -->|Clone| C[本地仓库<br/>VCPChat-main]
+    B -->|Clone| C[本地仓库<br/>VCPChat]
     A -->|获取更新| D[脚本自动处理]
     D -->|合并到| C
     C -->|推送到| B
@@ -486,7 +468,7 @@ VCPToolBox = https://github.com/john123/VCPToolBox.git
 
 ```cmd
 # 检查 VCPChat
-cd /d D:\VCP\VCPChat-main
+cd /d D:\VCP\VCPChat
 git remote -v
 
 # 应该显示：
@@ -494,7 +476,7 @@ git remote -v
 # origin  https://github.com/YOUR_USERNAME/VCPChat.git (push)
 
 # 检查 VCPToolBox
-cd /d D:\VCP\VCPToolBox-main
+cd /d D:\VCP\VCPToolBox
 git remote -v
 ```
 
@@ -505,11 +487,11 @@ git remote -v
 
 ```bash
 # 检查 VCPChat
-cd ~/VCP/VCPChat-main
+cd ~/VCP/VCPChat
 git remote -v
 
 # 检查 VCPToolBox
-cd ~/VCP/VCPToolBox-main
+cd ~/VCP/VCPToolBox
 git remote -v
 ```
 
@@ -604,7 +586,7 @@ python3 update_vcp.py
 
 ## 📁 脚本文件说明
 
-### update_vcp.py - Python 主脚本
+### 📄 update_vcp.py - Python 主脚本
 
 **文件作用**：核心功能实现，跨平台通用的 Python 脚本
 
@@ -640,18 +622,19 @@ python update_vcp.py --help
 ```
 
 **高级参数**：
-| 参数 | 说明 | 示例 |
-|------|------|------|
-| `--project` | 指定项目（chat/toolbox） | `--project chat` |
-| `--action` | 执行操作（update/rollback/status） | `--action status` |
-| `--parallel` | 并行模式（默认启用） | `--parallel` |
-| `--sequential` | 顺序模式 | `--sequential` |
-| `--force-push` | 强制推送 | `--force-push` |
-| `--skip-docker` | 跳过 Docker 操作 | `--skip-docker` |
-| `--debug` | 启用调试模式 | `--debug` |
-| `--config` | 指定配置文件 | `--config my_config.ini` |
 
-### update_vcp.bat - Windows 批处理脚本
+| 参数            | 说明                               | 示例                     |
+| --------------- | ---------------------------------- | ------------------------ |
+| `--project`     | 指定项目（chat/toolbox）           | `--project chat`         |
+| `--action`      | 执行操作（update/rollback/status） | `--action status`        |
+| `--parallel`    | 并行模式（默认启用）               | `--parallel`             |
+| `--sequential`  | 顺序模式                           | `--sequential`           |
+| `--force-push`  | 强制推送                           | `--force-push`           |
+| `--skip-docker` | 跳过 Docker 操作                   | `--skip-docker`          |
+| `--debug`       | 启用调试模式                       | `--debug`                |
+| `--config`      | 指定配置文件                       | `--config my_config.ini` |
+
+### 📄 update_vcp.bat - Windows 批处理脚本
 
 **文件作用**：Windows 平台的用户友好界面
 
@@ -677,14 +660,7 @@ update_vcp.bat
 update_vcp.bat --debug
 ```
 
-**菜单功能说明**：
-
-- **更新选项 [1-4]**：不同的更新模式选择
-- **回滚选项 [5-7]**：撤销更新操作
-- **管理选项 [A-T]**：查看日志、状态、配置等
-- **调试选项 [D]**：问题诊断和详细执行信息
-
-### update_vcp.sh - Linux/macOS Shell 脚本
+### 📄 update_vcp.sh - Linux/macOS Shell 脚本
 
 **文件作用**：Unix 系统的原生脚本界面
 
@@ -715,19 +691,11 @@ chmod +x update_vcp.sh
 ./update_vcp.sh --no-color
 ```
 
-**环境检查功能**：
-
-- Python 版本和模块检查
-- Git 配置验证
-- Docker 环境检测
-- 网络连接测试
-- 项目目录结构验证
-
 ---
 
 ## ⚙️ 配置文件详解
 
-### update_vcp_config.ini 结构
+### 📋 update_vcp_config.ini 结构
 
 配置文件采用 INI 格式，包含以下主要部分：
 
@@ -736,32 +704,15 @@ chmod +x update_vcp.sh
 # Version: v1.0
 # Generated: 2024-01-01 12:00:00
 
-[general]
-# 通用设置
-
-[timeouts]
-# 超时设置
-
-[docker]
-# Docker 相关设置
-
-[performance]
-# 性能优化设置
-
-[logging]
-# 日志配置
-
-[network]
-# 网络设置
-
-[projects]
-# 项目特定配置
-
-[origins]
-# Fork 仓库 URL
-
-[custom_commands]
-# 自定义命令
+[general]       # 通用设置
+[timeouts]      # 超时设置
+[docker]        # Docker 相关设置
+[performance]   # 性能优化设置
+[logging]       # 日志配置
+[network]       # 网络设置
+[projects]      # 项目特定配置
+[origins]       # Fork 仓库 URL
+[custom_commands] # 自定义命令
 ```
 
 ### [general] - 通用设置
@@ -813,15 +764,15 @@ network_retry_count = 3
 
 ### [docker] - Docker 设置
 
-| 配置项                     | 默认值           | 说明                 | 可选值                                         |
-| -------------------------- | ---------------- | -------------------- | ---------------------------------------------- |
-| `auto_prune`               | `false`          | 自动清理 Docker 资源 | `true`, `false`                                |
-| `restart_policy`           | `unless-stopped` | 容器重启策略         | `no`, `on-failure`, `always`, `unless-stopped` |
-| `max_restart_attempts`     | `3`              | 最大重启尝试次数     | 1-10                                           |
-| `use_simple_health_check`  | `true`           | 使用简单健康检查     | `true`, `false`                                |
-| `wait_before_health_check` | `10`             | 健康检查前等待时间   | 5-60                                           |
-| `rebuild_on_config_change` | `true`           | 配置变更时重建       | `true`, `false`                                |
-| `remove_orphans`           | `true`           | 移除孤立容器         | `true`, `false`                                |
+| 配置项                     | 默认值           | 说明                     | 可选值                                         |
+| -------------------------- | ---------------- | ------------------------ | ---------------------------------------------- |
+| `auto_prune`               | `false`          | 自动清理 Docker 资源     | `true`, `false`                                |
+| `restart_policy`           | `unless-stopped` | 容器重启策略             | `no`, `on-failure`, `always`, `unless-stopped` |
+| `max_restart_attempts`     | `3`              | 最大重启尝试次数         | 1-10                                           |
+| `use_simple_health_check`  | `true`           | 使用简单健康检查         | `true`, `false`                                |
+| `wait_before_health_check` | `10`             | 健康检查前等待时间（秒） | 5-60                                           |
+| `rebuild_on_config_change` | `true`           | 配置变更时重建           | `true`, `false`                                |
+| `remove_orphans`           | `true`           | 移除孤立容器             | `true`, `false`                                |
 
 **配置示例**：
 
@@ -923,19 +874,20 @@ MyCustomProject = {
 ```
 
 **项目配置参数说明**：
-| 参数 | 类型 | 说明 | 示例 |
-|------|------|------|------|
-| `path` | 字符串 | 项目本地路径 | `"MyProject"` |
-| `upstream_url` | 字符串 | 上游仓库 URL | `"https://github.com/original/repo.git"` |
-| `origin_url` | 字符串 | Fork 仓库 URL | `"https://github.com/yourfork/repo.git"` |
-| `has_docker` | 布尔值 | 是否包含 Docker | `true`, `false` |
-| `docker_compose_file` | 字符串 | Docker Compose 文件名 | `"docker-compose.yml"` |
-| `branch` | 字符串 | 主分支名称 | `"main"`, `"master"` |
-| `auto_stash` | 布尔值 | 自动暂存未提交更改 | `true`, `false` |
-| `docker_port` | 数字 | Docker 服务端口 | `3000` |
-| `docker_service_name` | 字符串 | Docker 服务名称 | `"myapp"` |
 
-### [origins] - Fork 仓库 URL
+| 参数                  | 类型   | 说明                  | 示例                                     |
+| --------------------- | ------ | --------------------- | ---------------------------------------- |
+| `path`                | 字符串 | 项目本地路径          | `"MyProject"`                            |
+| `upstream_url`        | 字符串 | 上游仓库 URL          | `"https://github.com/original/repo.git"` |
+| `origin_url`          | 字符串 | Fork 仓库 URL         | `"https://github.com/yourfork/repo.git"` |
+| `has_docker`          | 布尔值 | 是否包含 Docker       | `true`, `false`                          |
+| `docker_compose_file` | 字符串 | Docker Compose 文件名 | `"docker-compose.yml"`                   |
+| `branch`              | 字符串 | 主分支名称            | `"main"`, `"master"`                     |
+| `auto_stash`          | 布尔值 | 自动暂存未提交更改    | `true`, `false`                          |
+| `docker_port`         | 数字   | Docker 服务端口       | `3000`                                   |
+| `docker_service_name` | 字符串 | Docker 服务名称       | `"myapp"`                                |
+
+### [origins] - Fork 仓库 URL ⭐
 
 **这是最重要的配置部分**，必须正确设置您的 Fork 仓库 URL：
 
@@ -991,7 +943,7 @@ VCPToolBox = pre:docker system prune -f,post:echo "VCPToolBox updated"
 
 ## 🔧 高级配置
 
-### 环境变量支持
+### 🌐 环境变量支持
 
 工具支持通过环境变量覆盖配置：
 
@@ -1007,7 +959,7 @@ export VCP_MAX_WORKERS=8
 export VCP_ENABLE_PROXY=true
 ```
 
-### 多配置文件管理
+### 📁 多配置文件管理
 
 支持使用不同的配置文件：
 
@@ -1017,13 +969,13 @@ python update_vcp.py --config production_config.ini
 python update_vcp.py --config development_config.ini
 ```
 
-### Git 配置优化
+### 🔧 Git 配置优化
 
 在每个项目目录中，可以设置特定的 Git 配置：
 
 ```bash
 # 进入项目目录
-cd VCPChat-main
+cd VCPChat
 
 # 设置项目特定配置
 git config user.name "Project Specific Name"
@@ -1037,7 +989,7 @@ git config https.proxy http://proxy:8080
 git config http.sslVerify false  # 仅在必要时使用
 ```
 
-### Docker 优化配置
+### 🐳 Docker 优化配置
 
 对于 VCPToolBox 项目，可以优化 Docker 配置：
 
@@ -1290,7 +1242,7 @@ python update_vcp.py --action status
 
 ## 🆘 故障排除
 
-### 错误：未配置 Fork 仓库 URL
+### ❌ 错误：未配置 Fork 仓库 URL
 
 **错误信息**：
 
@@ -1321,7 +1273,7 @@ VCPToolBox = https://github.com/YOUR_REAL_USERNAME/VCPToolBox.git
 - 登录 GitHub 查看个人资料页面
 - 确认仓库确实存在且可访问
 
-### 错误：Python 版本过低
+### ❌ 错误：Python 版本过低
 
 **错误信息**：
 
@@ -1363,7 +1315,7 @@ brew install python@3.9
 # https://www.python.org/downloads/macos/
 ```
 
-### 错误：Git 连接超时
+### ❌ 错误：Git 连接超时
 
 **错误信息**：
 
@@ -1386,18 +1338,20 @@ nslookup github.com
 
 **方法 2：配置代理（公司网络）**
 
-````bash
+```bash
 # 设置 Git 代理
 git config --global http.proxy http://proxy:port
 git config --global https.proxy http://proxy:port
 
 # 或在配置文件中设置
+```
+
 ```ini
 [network]
 use_proxy = true
 http_proxy = http://proxy.company.com:8080
 https_proxy = http://proxy.company.com:8080
-````
+```
 
 **方法 3：使用 SSH 代替 HTTPS**
 
@@ -1422,7 +1376,7 @@ git config --global http.postBuffer 524288000
 git config --global http.version HTTP/1.1
 ```
 
-### 错误：Docker 服务未运行
+### ❌ 错误：Docker 服务未运行
 
 **错误信息**：
 
@@ -1463,7 +1417,7 @@ docker run hello-world
 2. 确保 Docker 图标在菜单栏显示为运行状态
 3. 验证：`docker --version`
 
-### 错误：合并冲突
+### ❌ 错误：合并冲突
 
 **错误信息**：
 
@@ -1485,7 +1439,7 @@ auto_merge_conflicts = true
 
 ```bash
 # 进入项目目录
-cd VCPChat-main
+cd VCPChat
 
 # 查看冲突文件
 git status
@@ -1509,7 +1463,7 @@ git commit -m "Resolve merge conflicts"
 python update_vcp.py --action rollback --project chat
 ```
 
-### 错误：权限被拒绝
+### ❌ 错误：权限被拒绝
 
 **错误信息**：
 
@@ -1562,7 +1516,7 @@ cat ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
 ```
 
-### 错误：磁盘空间不足
+### ❌ 错误：磁盘空间不足
 
 **错误信息**：
 
@@ -1598,7 +1552,7 @@ du -sh VCP/
 dir VCP /s
 ```
 
-### 网络相关问题
+### 🌐 网络相关问题
 
 **DNS 解析问题**
 
@@ -1626,7 +1580,7 @@ sudo systemctl stop firewalld  # CentOS
 
 ## 📖 进阶使用
 
-### 并行 vs 顺序更新
+### ⚡ 并行 vs 顺序更新
 
 **并行更新（推荐）**
 
@@ -1648,7 +1602,7 @@ python update_vcp.py --parallel
 python update_vcp.py --sequential
 ```
 
-### Git 检查点系统
+### 🔄 Git 检查点系统
 
 工具自动创建多个检查点，提供精细的回滚控制：
 
@@ -1670,7 +1624,7 @@ python update_vcp.py --action list-checkpoints
 python update_vcp.py --action checkpoint --project chat --checkpoint before_update
 ```
 
-### 自定义项目支持
+### 🛠️ 自定义项目支持
 
 除了 VCPChat 和 VCPToolBox，还可以添加自定义项目：
 
@@ -1686,7 +1640,7 @@ MyProject = {
 }
 ```
 
-### 高级命令行用法
+### 💻 高级命令行用法
 
 ```bash
 # 组合多个参数
@@ -1702,7 +1656,7 @@ python update_vcp.py --safe-mode
 python update_vcp.py --config production.ini
 ```
 
-### 批量操作脚本
+### 📦 批量操作脚本
 
 创建批量操作脚本：
 
@@ -1756,7 +1710,7 @@ python3 update_vcp.py --project toolbox || {
 echo "批量更新完成！"
 ```
 
-### 监控和通知
+### 📊 监控和通知
 
 集成监控和通知功能：
 
@@ -1800,7 +1754,7 @@ else:
     send_notification("失败", f"更新失败:\n{result.stderr}")
 ```
 
-### 性能优化
+### ⚙️ 性能优化
 
 **系统资源优化**
 
@@ -1841,7 +1795,7 @@ wait_before_health_check = 15
 
 ## 🔒 安全性说明
 
-### 数据保护
+### 🛡️ 数据保护
 
 **备份机制**
 
@@ -1877,7 +1831,7 @@ http_proxy = http://proxy:8080
 4. **启用二因素认证**（2FA）
 5. **定期检查**授权应用和令牌
 
-### 网络安全
+### 🌐 网络安全
 
 **HTTPS 强制**
 
@@ -1903,7 +1857,7 @@ use_proxy = false
 http_proxy = http://trusted-proxy.company.com:8080
 ```
 
-### 代码完整性
+### 🔐 代码完整性
 
 **签名验证**
 
@@ -1919,7 +1873,7 @@ git config --global tag.gpgsign true
 - 检查 Git 提交的 SHA 值
 - 监控异常的文件变更
 
-### 隐私保护
+### 🔒 隐私保护
 
 **日志脱敏**
 
@@ -1940,7 +1894,7 @@ log_level = WARNING
 
 ## 🤝 获取帮助
 
-### 官方资源
+### 📚 官方资源
 
 **项目主页**
 
@@ -1954,7 +1908,7 @@ log_level = WARNING
 - 📧 **邮件支持**: 通过项目维护者联系
 - 📱 **社交媒体**: 关注项目动态
 
-### 问题报告指南
+### 📝 问题报告指南
 
 当遇到问题时，请提供以下信息：
 
@@ -1992,7 +1946,7 @@ grep -i error update_vcp_logs/*.log
 cat update_vcp_config.ini | grep -v -E "(password|token|key)"
 ```
 
-### 故障排除检查清单
+### ✅ 故障排除检查清单
 
 在寻求帮助前，请先检查：
 
@@ -2023,7 +1977,7 @@ cat update_vcp_config.ini | grep -v -E "(password|token|key)"
 - [ ] 防火墙未阻止 Git 操作
 - [ ] 代理配置正确（如使用代理）
 
-### 自助诊断工具
+### 🔧 自助诊断工具
 
 **运行完整诊断**
 
@@ -2055,7 +2009,7 @@ rm update_vcp_config.ini
 python update_vcp.py --action status
 ```
 
-### 贡献指南
+### 🤝 贡献指南
 
 欢迎为项目贡献代码和文档：
 
@@ -2086,7 +2040,7 @@ python update_vcp.py --action status
 
 ## 🎯 最佳实践总结
 
-### 日常使用建议
+### 📅 日常使用建议
 
 **定期更新策略**
 
@@ -2107,7 +2061,7 @@ python update_vcp.py --action status
 - 🚨 **错误监控**: 设置自动化监控脚本
 - 📱 **通知机制**: 配置更新状态通知
 
-### 团队协作建议
+### 👥 团队协作建议
 
 **配置标准化**
 
@@ -2139,7 +2093,7 @@ enable_parallel_git = true
 - 🎓 提供新成员培训材料
 - 🔄 及时更新最佳实践指南
 
-### 生产环境部署
+### 🚀 生产环境部署
 
 **环境分离**
 
@@ -2192,7 +2146,7 @@ python3 update_vcp.py --action status --config config_prod.ini
 
 ## 🚀 未来发展路线图
 
-### 计划中的功能
+### 📅 计划中的功能
 
 **v1.1 版本**
 
@@ -2209,7 +2163,7 @@ python3 update_vcp.py --action status --config config_prod.ini
 - 🛡️ 企业级安全功能
 - 📈 高级分析仪表板
 
-### 社区参与
+### 👥 社区参与
 
 我们欢迎社区的参与和贡献：
 
@@ -2221,7 +2175,7 @@ python3 update_vcp.py --action status --config config_prod.ini
 
 ---
 
-## 📄 许可证和版权
+## 📄 许可证
 
 本项目采用 MIT 许可证，详情请参见 LICENSE 文件。
 
@@ -2236,9 +2190,14 @@ python3 update_vcp.py --action status --config config_prod.ini
 ### 免责声明
 
 - 本工具仅供学习和开发使用
-- 使用前请确保遵守相关法律法规
+- 使用前请确保遵守相关法律法规和项目许可证
 - 作者不承担因使用本工具而导致的任何损失
 - 请在测试环境中充分验证后再用于生产环境
+- 对原 VCP 项目的使用请遵循其原始许可证条款
+
+### 贡献
+
+欢迎提交 Issue 和 Pull Request 来改进本工具！
 
 ---
 
@@ -2254,33 +2213,6 @@ python3 update_vcp.py --action status --config config_prod.ini
 
 _最后更新时间: 2025 年 7 月_
 
-[返回顶部](#vcp-自动更新工具-v10---完整使用指南)
+[返回顶部](#vcp-auto-update-tool-v10)
 
 </div>
-
-<artifacts>
-<artifact identifier="license-section" type="text/markdown" title="README.md 许可证章节">
----
-📄 许可证
-本项目采用 MIT 许可证，详情请参见 LICENSE 文件。
-第三方组件
-本工具使用了以下开源组件：
-
-Python: Python Software Foundation License
-Git: GNU General Public License v2.0
-Docker: Apache License 2.0
-
-免责声明
-
-本工具仅供学习和开发使用
-使用前请确保遵守相关法律法规和项目许可证
-作者不承担因使用本工具而导致的任何损失
-请在测试环境中充分验证后再用于生产环境
-对原 VCP 项目的使用请遵循其原始许可证条款
-
-贡献
-欢迎提交 Issue 和 Pull Request 来改进本工具！
-
-</artifact>
-</artifacts>
-
