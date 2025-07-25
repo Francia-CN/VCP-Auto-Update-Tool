@@ -1,6 +1,8 @@
 # vcp-update-tool
 
-🚀 VCP Auto Update Tool - VCP 自动更新工具 - 智能同步 VCPChat 和 VCPToolBox 项目的自动化脚本 Automated update tool for VCPChat and VCPToolBox projects with intelligent conflict resolution and Docker deployment
+🚀 VCP Update Tool - VCP 自动更新工具 
+- 智能同步 VCPChat 和 VCPToolBox 项目的自动化脚本 
+- Automated update tool for VCPChat and VCPToolBox projects with intelligent conflict resolution and Docker deployment
 
 # VCP 自动更新工具 v1.0 - 完整使用指南
 
@@ -13,8 +15,7 @@
 **📢 使用须知**
 - ✅ 本工具不是 VCP 项目的官方组件。
 - ✅ 使用前必须先 Fork 原始项目：
-[VCPChat](https://github.com/lioensky/VCPChat)
-[VCPToolBox](https://github.com/lioensky/VCPToolBox)。
+[VCPChat](https://github.com/lioensky/VCPChat)和[VCPToolBox](https://github.com/lioensky/VCPToolBox)。
 - ✅ 本工具遵循 MIT 许可证，详见 `LICENSE` 文件。
 - ⚠️ **风险提示**：使用本工具的风险由用户自行承担。
 - 💡 **支持项目**：如果觉得有用，请给项目一个 ⭐ Star。
@@ -390,15 +391,15 @@ chmod +x update_vcp.py
 
 #### 3.4 验证目录结构
 
-此时您的目录结构应该是：
+此时，建议将您的目录结构修改为：
 
 ```
 VCP/
-├── VCPChat-main/          # VCPChat 项目
+├── VCPChat/          # VCPChat 项目
 │   ├── .git/              # Git 仓库信息
 │   ├── src/               # 源代码
 │   └── ...                # 其他项目文件
-├── VCPToolBox-main/       # VCPToolBox 项目
+├── VCPToolBox/       # VCPToolBox 项目
 │   ├── .git/              # Git 仓库信息
 │   ├── docker-compose.yml # Docker 配置
 │   └── ...                # 其他项目文件
