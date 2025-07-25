@@ -383,7 +383,7 @@ VCP/
 │   ├── .git/              # Git 仓库信息
 │   ├── docker-compose.yml # Docker 配置
 │   └── ...                # 其他项目文件
-└── VCPUpdate/             # 更新工具目录
+└── VCPUpdate/                  # 更新工具目录
     ├── update_vcp.py      # Python 主脚本
     ├── update_vcp.bat     # Windows 脚本
     ├── update_vcp.sh      # Linux/macOS 脚本
