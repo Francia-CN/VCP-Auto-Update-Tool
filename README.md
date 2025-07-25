@@ -166,12 +166,11 @@ sudo systemctl status docker  # Linux
 ### 📝 总体流程概览
 
 ```mermaid
-graph TD
-    A[原作者仓库<br/>lioensky/VCPChat] -->|Fork| B[您的仓库<br/>YOUR_USERNAME/VCPChat]
-    B -->|Clone| C[本地仓库<br/>VCPChat]
-    A -->|获取更新| D[脚本自动处理]
-    D -->|合并到| C
-    C -->|推送到| B
+graph LR
+    A[1. Fork 原始仓库] --> B[2. 克隆到本地]
+    B --> C[3. 下载更新工具]
+    C --> D[4. 配置 Fork URL]
+    D --> E[5. 运行自动更新]
 ```
 ```
 
