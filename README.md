@@ -375,11 +375,11 @@ chmod +x update_vcp.py
 
 ```
 VCP/
-├── VCPChat/               # VCPChat 项目
+├── VCPChat-main/               # VCPChat 项目
 │   ├── .git/              # Git 仓库信息
 │   ├── src/               # 源代码
 │   └── ...                # 其他项目文件
-├── VCPToolBox/            # VCPToolBox 项目
+├── VCPToolBox-main/            # VCPToolBox 项目
 │   ├── .git/              # Git 仓库信息
 │   ├── docker-compose.yml # Docker 配置
 │   └── ...                # 其他项目文件
