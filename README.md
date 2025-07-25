@@ -165,13 +165,12 @@ sudo systemctl status docker  # Linux
 
 ### 📝 总体流程概览
 
-```mermaid
 graph LR
     A[1. Fork 原始仓库] --> B[2. 克隆到本地]
     B --> C[3. 下载更新工具]
     C --> D[4. 配置 Fork URL]
     D --> E[5. 运行自动更新]
-
+    
 ### ✅ 环境准备检查清单
 
 在开始之前，请确认以下环境已准备就绪：
